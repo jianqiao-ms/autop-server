@@ -1,0 +1,42 @@
+---
+type: kubernetes api description
+version: "1.18"
+resources:
+  namespace:
+    group:  # default
+    version: v1 # default
+    operation:
+      read: /namespaces/{name}
+      list: /namespaces
+      watch: /watch/namespaces/{name}
+      watch_list: /watch/namespaces
+      patch:
+        method: PATCH
+        uri: /apis/apps/v1/namespaces/{namespace}/deployments/{name}
+  deployment:
+    group: apps # specific api group
+    version: v1 # default
+    operation:
+      read: /namespaces/{namespace}/deployments/{name}
+      list: /namespaces/{namespace}/deployments
+      list_all_namespaces: /deployments
+      watch: /watch/namespaces/{namespace}/deployments/{name}
+      watch_list: /watch/namespaces/{namespace}/deployments
+      watch_list_all_namespaces: /watch/deployments
+  ingress:
+    group: networking.k8s.io
+    version: v1beta1
+    operation:
+      read: /namespaces/{namespace}/ingresses/{name}
+      list: /namespaces/{namespace}/ingresses
+      list_all_namespaces: /ingresses
+      watch: /watch/namespaces/{namespace}/ingresses/{name}
+      watch_list: /watch/namespaces/{namespace}/ingresses
+      watch_list_all_namespaces: /watch/ingresses
+---
+type: kubernetes api description
+version: "1.20"
+resources:
+  ingress:
+    group: networking.k8s.io
+    version: v1

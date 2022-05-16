@@ -1,0 +1,5 @@
+tornado~=6.1
+tortoise-orm
+aiomysql
+pyyaml
+cryptography

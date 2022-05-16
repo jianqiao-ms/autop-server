@@ -1,3 +1,13 @@
+
+# Custom
+.idea/
+**test**
+.venv/
+autop.yaml
+autop.yml
+
+# .gitignore created by github.com
+# Python
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
